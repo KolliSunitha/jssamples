@@ -123,6 +123,15 @@ console.log('This is what a ' + subText.sub() + ' looks like.');
 
 export class AppComponent {
   title = 'app';
+  public imagesUrl;
+  ngOnInit() {
+   this.imagesUrl = [
+      'assets/slider/slider1.jpg',
+      'assets/slider/slider2.jpg',
+      'assets/slider/slider3.jpg',
+      'assets/slider/slider4.jpg'
+      ];
  
- 
-}
+    }
+
+  }

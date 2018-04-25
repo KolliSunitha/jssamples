@@ -24,8 +24,8 @@ let arrlikes = {
 
 let arr = ["I", "go", "home"];
 delete arr[1];
-alert( arr[1] );
-alert( arr.length ); // length of the array when deleted the element
+console.log( arr[1] );
+console.log( arr.length ); // length of the array when deleted the element
 // Slice 
 let arr1 = ["I", "study", "JavaScript"];
 arr1.slice (1,1);
@@ -34,18 +34,18 @@ console.log( arr1 );
 let str = "test";
 let arr2 = ["t", "e", "s", "t"];
 
-alert( str.slice(1, 3) ); // es
-alert( arr2.slice(1, 3) ); // e,s
+console.log( str.slice(1, 3) ); // es
+console.log( arr2.slice(1, 3) ); // e,s
 
-alert( str.slice(-2) ); // st
-alert( arr2.slice(-2) ); // s,t
-alert( arr.indexOf(null) ); 
+console.log( str.slice(-2) ); // st
+console.log( arr2.slice(-2) ); // s,t
+console.log( arr.indexOf(null) ); 
 
 //Concat
 let arr3 = [1, 2];
-alert( arr3.concat([3, 4]));
-alert( arr3.concat([3, 4], [5, 6]));
-alert( arr3.concat([3, 4], 5, 6));
+console.log( arr3.concat([3, 4]));
+console.log( arr3.concat([3, 4], [5, 6]));
+console.log( arr3.concat([3, 4], 5, 6));
 
 // using find
 let users = [
@@ -55,15 +55,15 @@ let users = [
 ];
 
 let user = users.find(item => item.id == 1);
-alert(user.name); 
+console.log(user.name); 
 // filters
 let someUsers = users.filter(item => item.id < 3);
 
-alert(someUsers.length);
+console.log(someUsers.length);
 
 // using Map
 let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length)
-alert(lengths);
+console.log(lengths);
 // using sort
 let arr12 = [ 1, 2, 15 ];
 arr12.sort();
@@ -90,7 +90,7 @@ console.log(strnames);
 
 // arary using forEach
 ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
-  alert(`${item} is at index ${index} in ${array}`);
+  console.log(`${item} is at index ${index} in ${array}`);
 });
 
 //Filter Unique
@@ -109,3 +109,14 @@ let strings = ["Hare", "Krishna", "Hare", "Krishna",
   "Krishna", "Krishna", "Hare", "Hare", ":-O"
 ];
 console.log(unique(strings) );
+
+
+//Oject properties
+
+function getAllMethods(object) {
+  return Object.getOwnPropertyNames(object).filter(function(property) {
+      return typeof object[property] == 'function';
+  });
+}
+
+console.log(getAllMethods(Math));
